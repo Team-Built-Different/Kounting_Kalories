@@ -1,0 +1,56 @@
+Apple 95  
+Banana 105 
+Kiwi 42 cal 
+Watermelon Slice 21 
+Grape 2 
+Orange 62 
+Pomergrante 233 
+Strawberry 4 
+Baby Carrot 4 
+Steak 140 
+Hamburger 280 
+Pizza Slice 240 
+Fried Chicken 284
+Dragonfruit 60 
+Nachos 346 
+Ice Cream 276 
+Brownie 112 
+Potato Chips 160 
+Lasagna 344 
+Chocolate 23
+Mashed Potatoes 227 
+Cookie 68 
+Salad 81 
+Sandwich 232 
+Mcdonalds Small fries 237 
+Mcdonalds Medium fries 337 
+Mcdonalds Large fries 447 
+Big mac 508 
+Mcdonalds cheese burger 301 
+McNuggets 259 
+McChicken 388 
+Filet-o-fish 329 
+McFlurry 267 
+Cheesecake 150 
+Pumpkin Pie slice 323 
+Pozole 199 
+Avacado Roll 140 
+California Roll 255 
+Cucumber Roll 136 
+Spicy Tuna Roll 290  
+Shrimp Tempura Roll 508
+Salmon and Avacado Roll 304 
+Magura Roll 184 
+Yellwotail and Scallion Roll 245 
+Eel and Avacado Roll 372 
+Tamales 285 
+Can of Soda 152 
+Orange Juice 110 
+Taco 156 
+Burrito 434 
+Torta 113 
+Huarache 392 
+Gordita 96
+Chilaquiles 400 
+Scrambled Eggs 91 
+Flan 446 
