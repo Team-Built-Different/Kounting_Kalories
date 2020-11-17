@@ -13,6 +13,7 @@
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         />
+    
     <TextView                       //the subtext below the meal name edit text telling the user that this is where the meal name goes.
         android:id="@+id/meal_name"
         android:layout_width="wrap_content"
@@ -28,6 +29,7 @@
         android:layout_height="50dp"
         android:layout_below="@id/meal_name"
         android:layout_centerHorizontal="true" />
+    
     <TextView                        // The subtext below the calorie number edit text telling the user that this is where the meal name goes. 
         android:id="@+id/cal_amount"
         android:layout_width="wrap_content"
@@ -36,6 +38,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/edit_cal"
         />
+    
     <Button                         // The button to save the meal in the food file database. 
         android:id="@+id/save_food"
         android:layout_width="wrap_content"
@@ -44,7 +47,5 @@
         android:layout_below="@id/cal_amount"
         android:text="Save to food file"
         />
-
-
-
+    
 </RelativeLayout>
