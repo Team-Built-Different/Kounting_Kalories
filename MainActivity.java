@@ -31,3 +31,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
+// This is the main for the project. This is the homescreen of the app and this is all the writtewn code. THis is not the XML for the GUI but the code of the fuctions in the main.
