@@ -1,3 +1,5 @@
+// this xml file is writen by Eric Gonzalez. This xml file is the GUI for the NewMealActivity.java. this file contrains the buttons two inputs which are meal names,
+// meal calories, and a submit buttom. 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -5,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity_New_Meal">
-
+//text input for user meal calories. the id is UserCaloriesInput
     <EditText
         android:id="@+id/UserCaloriesInput"
         android:layout_width="wrap_content"
@@ -19,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.481" />
-
+//text input for user meal name. the id is MealNameInput
     <EditText
         android:id="@+id/MealNameInput"
         android:layout_width="wrap_content"
@@ -33,7 +35,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.335" />
-
+//button is the user submission . the button id is IncreaseCalorieCountButton
     <Button
         android:id="@+id/IncreaseCalorieCountButton"
         android:layout_width="0dp"
