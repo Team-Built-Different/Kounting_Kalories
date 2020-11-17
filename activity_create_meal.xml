@@ -7,13 +7,13 @@
     tools:context=".CreateMealActivity">
 
 
-    <EditText
+    <EditText                         //The edit text for the meal name
         android:id="@+id/edit_meal"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         />
-    <TextView
+    <TextView                       //the subtext below the meal name edit text telling the user that this is where the meal name goes.
         android:id="@+id/meal_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,13 +22,13 @@
         android:layout_below="@id/edit_meal"
         />
 
-    <EditText
+    <EditText                    // The edit text where the calorie number goes
         android:id="@+id/edit_cal"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_below="@id/meal_name"
         android:layout_centerHorizontal="true" />
-    <TextView
+    <TextView                        // The subtext below the calorie number edit text telling the user that this is where the meal name goes. 
         android:id="@+id/cal_amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/edit_cal"
         />
-    <Button
+    <Button                         // The button to save the meal in the food file database. 
         android:id="@+id/save_food"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
