@@ -1,3 +1,4 @@
+// This file was made by Jorge Rios
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -5,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <Button
+    <Button  // This is the History Button 
         android:id="@+id/HistoryButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -20,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MealOptionButton" />
 
-    <Button
+    <Button   // This is the CreateMeal Button 
         android:id="@+id/CreateMealButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -36,7 +37,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AddMealButton" />
 
-    <Button
+    <Button   // This is the MealOption Button 
         android:id="@+id/MealOptionButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -51,7 +52,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CreateMealButton" />
 
-    <Button
+    <Button    // This is the AddMeal Button
         android:id="@+id/AddMealButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
