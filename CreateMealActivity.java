@@ -1,4 +1,4 @@
-package com.example.kountingkalories;
+package com.example.kountingkalories; //Author: Isaac Zavala
 
 import androidx.appcompat.app.AppCompatActivity;
 
