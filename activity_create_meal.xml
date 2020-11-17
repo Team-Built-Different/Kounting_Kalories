@@ -8,7 +8,7 @@
 
 
     <EditText                         //The edit text for the meal name
-        android:id="@+id/edit_meal"
+        android:id="@+id/edit_dinner"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
