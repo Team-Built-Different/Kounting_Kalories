@@ -1,12 +1,17 @@
 // This is the main for the project. This is the homescreen of the app and this is all the writtewn code. THis is not the XML for the GUI but the code of the fuctions in the main.
 // This file was created by Alexander Sanchez
 
+package com.example.kountingkalories;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,12 +22,19 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        int OldCalories =0;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         AddMealButton = (Button)findViewById(R.id.AddMealButton);
         CreateMealButton = (Button)findViewById(R.id.CreateMealButton);
         MealOptionButton= (Button)findViewById(R.id.MealOptionButton);
         HistoryButton = (Button)findViewById(R.id.HistoryButton);
+
+
+        Intent intent =getIntent();
+        int NewCalories =intent.getIntExtra(NewMealActivity.Calories_count,0);//this is from the other activity NewMealActivity
+        TextView textView1 =(TextView) findViewById(R.id.CalorieCount);
+        textView1.setText(""+NewCalories);
         AddMealButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
 
     }
 
