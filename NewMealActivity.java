@@ -12,6 +12,7 @@ import android.widget.EditText;
 
 
 public class NewMealActivity extends AppCompatActivity {
+    public static final String Calories_count ="com.example.myapplication.example.Calories_count";
     String Mealname;
     int Calories;
 
@@ -30,6 +31,12 @@ public class NewMealActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     Mealname = MealNameInput.getText().toString();
                     Calories = Integer.valueOf(UserCaloriesInput.getText().toString());
+                    Intent intent = new Intent(NewMealActivity.this, MainActivity.class);
+                    intent.putExtra(Calories_count,Calories);
+                    startActivity(intent);
+
+
+
                     Log.d("info",Mealname); //keep track in terminal with info filter
                     Log.d("info", String.valueOf(Calories));//keep track in terminal with info filter
 
