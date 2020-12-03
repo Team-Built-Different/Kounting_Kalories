@@ -1,14 +1,17 @@
 //this class is done by Eric Gonzalez. this is the class for the activity_new_meal.xml file variables are string Mealname and int Calories.
 package com.example.myapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.SaveCallback;
 
 
 public class NewMealActivity extends AppCompatActivity {
@@ -35,11 +38,24 @@ public class NewMealActivity extends AppCompatActivity {
                     intent.putExtra(Calories_count,Calories);
                     startActivity(intent);
 
+                    // Configure Query
+                    ParseObject History = new ParseObject("History");
+                        // Store an object
+                    History.put("NameOfMeal", Mealname);
+                    History.put("Calories", Calories);
 
 
-                    Log.d("info",Mealname); //keep track in terminal with info filter
-                    Log.d("info", String.valueOf(Calories));//keep track in terminal with info filter
-
+                    // Saving object
+                    History.saveInBackground(new SaveCallback() {
+                        @Override
+                        public void done(ParseException e) {
+                            if (e == null) {
+                                // Success
+                            } else {
+                                // Error
+                            }
+                        }
+                    });
 
 
                 }
