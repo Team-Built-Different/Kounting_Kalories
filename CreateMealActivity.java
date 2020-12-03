@@ -1,12 +1,15 @@
-package com.example.kountingkalories;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.SaveCallback;
 
 public class CreateMealActivity extends AppCompatActivity {
     String Mealname;
@@ -27,13 +30,33 @@ public class CreateMealActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Mealname = edit_meal.getText().toString();
                 Calories = Integer.valueOf(edit_cal.getText().toString());
-                Log.d("info",Mealname);
-                Log.d("info", String.valueOf(Calories));
+                Intent intent = new Intent(CreateMealActivity.this, MainActivity.class);
+                startActivity(intent);
+
+
+                ParseObject MealSaved = new ParseObject("MealSaved");
+// Store an object
+                MealSaved.put("NameOfMeal", Mealname);
+                MealSaved.put("Calories", Calories);
+
+
+// Saving object
+                MealSaved.saveInBackground(new SaveCallback() {
+                    @Override
+                    public void done(ParseException e) {
+                        if (e == null) {
+                            // Success
+                        } else {
+                            // Error
+                        }
+                    }
+                });
 
 
 
             }
         });
+
 
 
     }
