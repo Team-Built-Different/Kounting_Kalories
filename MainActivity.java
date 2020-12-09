@@ -1,8 +1,6 @@
 // This is the main for the project. This is the homescreen of the app and this is all the writtewn code. THis is not the XML for the GUI but the code of the fuctions in the main.
 // This file was created by Alexander Sanchez
 
-package com.example.kountingkalories;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -65,12 +63,18 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        MealOptionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MealOptions.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 
 
     }
-
-}
 
 }
