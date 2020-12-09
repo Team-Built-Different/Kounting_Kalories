@@ -5,16 +5,20 @@ import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.parse.GetCallback;
+import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
+import java.util.List;
 import java.util.Vector;
 
 public class HistoryActivity extends AppCompatActivity {
     Vector<String> VecMeal = new Vector<String>();
     Vector<Integer> VecCalories= new Vector<Integer>();
+    //public ArrayList<String> NameOfMeal= new ArrayList<String>();
+   /// public ArrayList<int> Calories = new ArrayList<int>();
+    public String[] myArray = {};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,22 +28,36 @@ public class HistoryActivity extends AppCompatActivity {
 
 
 
-
+        // Configure Query
         ParseQuery<ParseObject> query = ParseQuery.getQuery("History");
+
+        // Query Parameters
         query.whereExists("Calories");
-        query.getFirstInBackground(new GetCallback<ParseObject>() {
-            public void done(ParseObject player, ParseException e) {
-                if (e == null) {
-                    String NameOfMeal = player.getString("NameOfMeal");
-                    int Calories = player.getInt("Calories");
-                    Log.d("info", String.valueOf(Calories));
-                    Log.d("info",NameOfMeal);
+
+        // Sorts the results in ascending order by the itemName field
+        query.orderByAscending("Calories");
+
+        query.findInBackground(new FindCallback<ParseObject>() {
+            @Override
+            public void done(List<ParseObject> objects, final ParseException e) {
+                if (e == null){
+                    // Adding objects into the Array
+                    for(int i= 0 ; i < objects.size(); i++){
+                        String element = objects.get(i).getString("NameOfMeal");
+                        int temp = objects.get(i).getInt("Calories");
+
+                        VecMeal.add(element.toString());
+                        VecCalories.add(temp);
+                        Log.d("info", String.valueOf(VecMeal));
+                        Log.d("info", String.valueOf(VecCalories));
+                    }
                 } else {
-                    // Something is wrong
+
                 }
-            }
-        });
+               // myArray = dataList.toArray(new String[dataList.size()]);
 
 
+    }
+});
     }
 }
