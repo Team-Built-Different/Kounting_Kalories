@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -9,18 +10,22 @@ import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.parse.FindCallback;
+import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+import com.parse.SaveCallback;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class CustomMealsActivity extends AppCompatActivity {
+    public static final String Calories_count ="com.example.myapplication.example.Calories_count";
     public ArrayList<String> dataList = new ArrayList<String>();
     public String[] myArray = {};
-
+    public String MealName;
+     int Calories;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +76,42 @@ public class CustomMealsActivity extends AppCompatActivity {
 
                         final String value = (String) adapter.getItemAtPosition(position);
 
-                        //put in code for adding it to the history and adding it to calorie count
+                        ParseQuery<ParseObject> query = ParseQuery.getQuery("MealSaved");
+                        query.whereEqualTo("NameOfMeal", value);
+                        query.getFirstInBackground(new GetCallback<ParseObject>() {
+                            public void done(ParseObject player, ParseException e) {
+                                if (e == null) {
+                                     MealName = player.getString("NameOfMeal");
+                                    Calories = player.getInt("Calories");
+
+                                } else {
+                                    // Something is wrong
+                                }
+                                //send calories to main
+                                Intent intent = new Intent(CustomMealsActivity.this, MainActivity.class);
+                                intent.putExtra(Calories_count,Calories);
+                                startActivity(intent);
+
+                                // Configure Query
+                                ParseObject History = new ParseObject("History");
+                                // Store an object
+                                History.put("NameOfMeal", MealName);
+                                History.put("Calories", Calories);
+
+
+                                // Saving object
+                                History.saveInBackground(new SaveCallback() {
+                                    @Override
+                                    public void done(ParseException e) {
+                                        if (e == null) {
+                                            // Success
+                                        } else {
+                                            // Error
+                                        }
+                                    }
+                                });
+                            }
+                        });
 
 
                     }
