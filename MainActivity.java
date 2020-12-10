@@ -17,6 +17,7 @@ import com.parse.ParseInstallation;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
+    public static final String data ="com.example.myapplication.example.Calories";
 
     private static int UpdateCalories;
     private static int updatetime;
@@ -25,8 +26,6 @@ public class MainActivity extends AppCompatActivity {
     Button MealOptionButton;
     Button HistoryButton;
     Button refresh;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -62,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
 
                 }
             });
-
         textView1.setText("" + UpdateCalories);
 
 
@@ -91,6 +89,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, MealOptions.class);
+
+                intent.putExtra(data,UpdateCalories);
                 startActivity(intent);
             }
         });
@@ -98,4 +98,3 @@ public class MainActivity extends AppCompatActivity {
 
     }
 }
-
