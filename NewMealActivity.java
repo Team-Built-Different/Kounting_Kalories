@@ -1,7 +1,6 @@
 //this class is done by Eric Gonzalez. this is the class for the activity_new_meal.xml file variables are string Mealname and int Calories.
 package com.example.myapplication;
 
-package com.example.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
