@@ -1,4 +1,4 @@
-package com.example.test;
+package com.example.test;  //Author:Isaac Zavala
 
 import android.content.Intent;
 import android.os.Bundle;
