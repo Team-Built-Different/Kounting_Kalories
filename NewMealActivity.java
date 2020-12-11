@@ -1,4 +1,7 @@
-//this class is done by Eric Gonzalez. this is the class for the activity_new_meal.xml file variables are string Mealname and int Calories.
+// written by:Eric Gonzalez
+// tested by:Eric Gonzalez
+// debugged by:Eric Gonzalez
+// etc. this is the class for the activity_new_meal.xml file variables are string Mealname and int Calories. stores the meal name and calories to the database
 package com.example.myapplication;
 
 
@@ -32,7 +35,7 @@ public class NewMealActivity extends AppCompatActivity {
         IncreaseCalorieCountButton = (Button)findViewById(R.id.IncreaseCalorieCountButton);
         IncreaseCalorieCountButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) {//onclick reads the user input and stores it inot mealname and calories
                 Mealname = MealNameInput.getText().toString();
                 Calories = Integer.valueOf(UserCaloriesInput.getText().toString());
                 Intent intent = new Intent(NewMealActivity.this, MainActivity.class);
@@ -40,13 +43,13 @@ public class NewMealActivity extends AppCompatActivity {
                 startActivity(intent);
 
                 // Configure Query
-                ParseObject History = new ParseObject("History");
+                ParseObject History = new ParseObject("History");//adds the meal name and calories to the database
                 // Store an object
                 History.put("NameOfMeal", Mealname);
                 History.put("Calories", Calories);
 
 
-                // Saving object
+                // Saving meal name and calories
                 History.saveInBackground(new SaveCallback() {
                     @Override
                     public void done(ParseException e) {
