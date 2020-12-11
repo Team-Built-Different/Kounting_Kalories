@@ -1,4 +1,7 @@
-// this xml file is writen by Eric Gonzalez. This xml file is the GUI for the NewMealActivity.java. this file contrains the buttons two inputs which are meal names,
+// written by:Eric Gonzalez
+// tested by:Eric Gonzalez
+// debugged by:Eric Gonzalez
+// etc. This xml file is the GUI for the NewMealActivity.java. this file contrains the buttons two inputs which are meal names,
 // meal calories, and a submit buttom. 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -7,7 +10,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NewMealActivity">
-
+     //user input for calories. only numbers
     <EditText
         android:id="@+id/UserCaloriesInput"
         android:layout_width="wrap_content"
@@ -21,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent"
 
         app:layout_constraintVertical_bias="0.481" />
-
+        //user input for meal name
     <EditText
         android:id="@+id/MealNameInput"
         android:layout_width="wrap_content"
@@ -34,7 +37,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.335" />
-
+        //save button
     <Button
         android:id="@+id/IncreaseCalorieCountButton"
         android:layout_width="0dp"
@@ -49,7 +52,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.677" />
-
+        //displaying user where to input meal name
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -61,7 +64,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.396" />
-
+    //displaying user where to input calories
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
