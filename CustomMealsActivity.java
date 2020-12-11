@@ -1,3 +1,8 @@
+// written by:Eric Gonzalez
+// tested by:Eric Gonzalez
+// debugged by:Eric Gonzalez
+// etc.back end for the ability to increase calorie count using saved meals.
+
 package com.example.myapplication;
 
 import android.content.Intent;
@@ -35,18 +40,18 @@ public class CustomMealsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_custom_meals);
         findObjects();
     }
-
+    
     private void findObjects() {
         myArray = new String[]{};
         final ListView listView = (ListView) findViewById(R.id.listviewA);
 
-        // Configure Query
+        // Configure Query searches for MealSaved on the database
         ParseQuery<ParseObject> query = ParseQuery.getQuery("MealSaved");
 
-        // Query Parameters
+        // Query Parameters list all hte meals which contain calories
         query.whereExists("Calories");
 
-        // Sorts the results in ascending order by the itemName field
+        // Sorts the results in ascending order by the calories
         query.orderByAscending("Calories");
 
         query.findInBackground(new FindCallback<ParseObject>() {
@@ -57,49 +62,49 @@ public class CustomMealsActivity extends AppCompatActivity {
                     for (int i = 0; i < objects.size(); i++) {
                         String element = objects.get(i).getString("NameOfMeal");
 
-                        dataList.add(element.toString());
+                        dataList.add(element.toString());//puts the name of the meals into the arraylist 
                     }
                 } else {
 
                 }
-                myArray = dataList.toArray(new String[dataList.size()]);
+                myArray = dataList.toArray(new String[dataList.size()]);//converts arraylist to an array
 
                 final ArrayList<String> list = new ArrayList<String>(Arrays.asList(myArray));
 
                 ArrayAdapter<String> adapterList
-                        = new ArrayAdapter<String>(CustomMealsActivity.this, android.R.layout.simple_list_item_single_choice, myArray);
+                        = new ArrayAdapter<String>(CustomMealsActivity.this, android.R.layout.simple_list_item_single_choice, myArray);// uses adapter to be able to put the array into list view
 
                 listView.setAdapter(adapterList);
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
-                    public void onItemClick(final AdapterView<?> adapter, View v, final int position, long id) {
+                    public void onItemClick(final AdapterView<?> adapter, View v, final int position, long id) {//reads when the user click on a meal
 
                         final String value = (String) adapter.getItemAtPosition(position);
 
-                        ParseQuery<ParseObject> query = ParseQuery.getQuery("MealSaved");
+                        ParseQuery<ParseObject> query = ParseQuery.getQuery("MealSaved");//searches the data base in MealSaved for the meal which has the same name as the meal clicked on
                         query.whereEqualTo("NameOfMeal", value);
                         query.getFirstInBackground(new GetCallback<ParseObject>() {
                             public void done(ParseObject player, ParseException e) {
                                 if (e == null) {
                                      MealName = player.getString("NameOfMeal");
-                                    Calories = player.getInt("Calories");
+                                    Calories = player.getInt("Calories");//gets calories and meal name
 
                                 } else {
                                     // Something is wrong
                                 }
-                                //send calories to main
+                                //send calories to main to increase calorie count
                                 Intent intent = new Intent(CustomMealsActivity.this, MainActivity.class);
                                 intent.putExtra(Calories_count,Calories);
                                 startActivity(intent);
 
                                 // Configure Query
-                                ParseObject History = new ParseObject("History");
+                                ParseObject History = new ParseObject("History");//adds meal and calories to the history in database
                                 // Store an object
                                 History.put("NameOfMeal", MealName);
                                 History.put("Calories", Calories);
 
 
-                                // Saving object
+                                // Saving object to database
                                 History.saveInBackground(new SaveCallback() {
                                     @Override
                                     public void done(ParseException e) {
