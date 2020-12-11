@@ -1,4 +1,6 @@
-// This file was made by Jorge Rios
+// written by:Jorge Rios
+// tested by: Jorge Rios
+// debugged by: Jorge Rios
 package com.example.kv1;
 // These are the packages that are required for the application to run
 import android.content.Intent;
