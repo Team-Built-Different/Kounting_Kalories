@@ -1,4 +1,7 @@
-package com.example.test;  //Author:Isaac Zavala
+//Writen By:Isaac Zavala
+//Tested by:Eric Gonzalez
+//Debugged:Isaac Zavala
+Isapackage com.example.test;  
 
 import android.content.Intent;
 import android.os.Bundle;
