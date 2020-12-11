@@ -31,7 +31,7 @@ public class MealOptions extends AppCompatActivity {
         setContentView(R.layout.activity_history);
         findObjects();
     }
-    private void findObjects(){
+    private void findObjects(){       //This is where it searches the Database and filters it to be less than 2000 calories.
         Intent intent =getIntent();
         int Calories = intent.getIntExtra(MainActivity.data,0);
         int filter = 2000 - Calories;
