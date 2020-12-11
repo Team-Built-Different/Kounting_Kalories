@@ -1,4 +1,4 @@
-Apple 95  // This was our original plan to use a text file of preloaded data but this will now move to the database. 
+Apple 95  // This was our original plan to use a text file of preloaded data but this will now move to the database. Author: Isaac Zavala
 Banana 105 
 Kiwi 42 cal 
 Watermelon Slice 21 
