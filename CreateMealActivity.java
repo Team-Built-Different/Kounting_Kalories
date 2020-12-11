@@ -1,4 +1,6 @@
-//Author:Isaac Zavala
+//Writen By:isaac Zavala
+//Tested by:Jorge Rios
+//Debugged:Isaac Zavala
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,13 +16,13 @@ import com.parse.SaveCallback;
 public class CreateMealActivity extends AppCompatActivity {
     String Mealname;
     int Calories;
-    Button save_food;
+    Button save_food;  //All the variables created
     EditText edit_cal;
     EditText edit_meal;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void onCreate(Bundle savedInstanceState) {  //read the blank text files and sends them to the database with the click of a button
+        super.onCreate(savedInstanceState);    
         setContentView(R.layout.activity_create_meal);
         edit_meal =(EditText) findViewById(R.id.edit_meal);
         edit_cal  =(EditText) findViewById(R.id.edit_cal);
