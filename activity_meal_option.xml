@@ -1,3 +1,6 @@
+//This is the .xml file for the GUI screen for the meals options page in our app
+//This was created by Alexander Sanchez
+
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
