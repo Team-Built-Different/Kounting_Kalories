@@ -2,6 +2,7 @@
 AddMealActivity.java
 - This is the class for adding a meal which is the back end for the buttons of new meal and custom meal.
 AndroidManifest.xml
+-This was pre built code that we had to add information into so that we could connect our app to the database and save all the information that is taken from each function.
 
 App.java
 -This is were the connection to the database occurs.
@@ -13,6 +14,7 @@ CustomMealsActivity.java
 HistoryActivity.java
 -  This is where the user is shown meals that have been previously consumed.
 MainActivity.java
+- This is the main class of the project and it connects to all other classes/functions of the code. It also contains the counter.
 
 MealFile.txt
   -This was our original plan to use a text file of preloaded data but this will now move to the database not really necessary but it was a reference 
@@ -26,6 +28,7 @@ activity_add_meal.xml
 activity_create_meal.xml
   - This is the xml for the GUI for the Create Meal.java class. It has two edit text boxes one for meal name and the other for calorie amount. Then one button to store the info into the database.
 activity_custom_meal.xml
+- This the GUI for the custom meals screen. 
 
 activity_history.xml
 - This is the GUI for the history screen.
@@ -34,6 +37,7 @@ activity_main.xml
 - This is the GUI for the home screen.
 
 activity_meal_option.xml
+-This is the GUI for the meal optionsn screen. Its vew is set as a list
 
 activity_new_meal.xml
 -This xml file is the GUI for the NewMealActivity.java. this file contrains the buttons two inputs which are meal names,
