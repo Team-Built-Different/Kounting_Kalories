@@ -44,6 +44,7 @@ activity_new_meal.xml
 meal calories, and a submit buttom. 
 
 strings.xml
+- This is where the application id and key are stored for the database.
 
 
 https://github.com/Team-Built-Different/Kounting_Kalories
