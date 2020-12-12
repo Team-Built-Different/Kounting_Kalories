@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private static int UpdateCalories;
     private static int updatetime;
     Button AddMealButton;
-    Button CreateMealButton;
+    Button CreateMealButton;    `   // These buttons are the buttons that connect the class to the other classes.
     Button MealOptionButton;
     Button HistoryButton;
     Button refresh;
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             updatetime = day;
         } else {
             updatetime = day;
-            UpdateCalories = 0;
+            UpdateCalories = 0;     // This is the counter function and also the reset counter function
         }
             refresh.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -68,14 +68,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, AddMealActivity.class);
-                startActivity(intent);
+                startActivity(intent); // All these functions connect all the other classes to the main activity. 
             }
         });
         CreateMealButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CreateMealActivity.class);
-                startActivity(intent);
+                startActivity(intent); 
             }
         });
         HistoryButton.setOnClickListener(new View.OnClickListener() {
