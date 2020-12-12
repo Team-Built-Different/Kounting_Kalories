@@ -1,16 +1,17 @@
 # Kounting_Kalories 
 AddMealActivity.java
-
+- This is the class for adding a meal which is the back end for the buttons of new meal and custom meal.
 AndroidManifest.xml
 
 App.java
+-This is were the connection to the database occurs.
 
 CreateMealActivity.java
 - This is the class for the create neal function which activates the button that puts the meal in the meals saved databse but does not increase the calorie count nor access the history database. 
 CustomMealsActivity.java
   -back end for the ability to increase calorie count using saved meals.
 HistoryActivity.java
-
+-  This is where the user is shown meals that have been previously consumed.
 MainActivity.java
 
 MealFile.txt
@@ -27,8 +28,10 @@ activity_create_meal.xml
 activity_custom_meal.xml
 
 activity_history.xml
+- This is the GUI for the history screen.
 
 activity_main.xml
+- This is the GUI for the home screen.
 
 activity_meal_option.xml
 
