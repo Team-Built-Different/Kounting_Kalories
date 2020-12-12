@@ -23,7 +23,7 @@ NewMealActivity.java
 activity_add_meal.xml
   -This file handles the GUI for the AddMealActivity.java class. The two buttons on this xml file are custom meal and new meal.
 activity_create_meal.xml
-  - This is he xml for the GUI for the Crete Meal.java class. It has two edit text boxes one for meal name and the other for calorie amount. Then one button to store the info into the database.
+  - This is the xml for the GUI for the Create Meal.java class. It has two edit text boxes one for meal name and the other for calorie amount. Then one button to store the info into the database.
 activity_custom_meal.xml
 
 activity_history.xml
