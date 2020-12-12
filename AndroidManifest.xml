@@ -2,6 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kountingkalories">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <meta-data
+        android:name="com.parse.SERVER_URL"
+        android:value="@string/back4app_server_url" /> // These connect the app to the dabase
+    <meta-data
+        android:name="com.parse.APPLICATION_ID"
+        android:value="@string/back4app_app_id" /> //Connects app to database
+    <meta-data
+        android:name="com.parse.CLIENT_KEY"
+        android:value="@string/back4app_client_key" /> //Connects app to database
 
     <application
         android:name=".App"
@@ -11,7 +23,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KountingKalories">
-        <activity android:name=".CreateMealActivity"></activity>
+        <activity android:name=".CustomMeal"></activity>
+        <activity android:name=".MealOptions" /> //This shows the app what classes can interact with the database
+        <activity android:name=".HistoryActivity" />
+        <activity android:name=".CreateMealActivity" />
         <activity android:name=".NewMealActivity" />
         <activity android:name=".AddMealActivity" />
         <activity android:name=".MainActivity">
@@ -23,18 +38,5 @@
         </activity>
     </application>
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-
-    <meta-data
-        android:name="com.parse.SERVER_URL"
-        android:value="@string/back4app_server_url" />
-    <meta-data
-        android:name="com.parse.APPLICATION_ID"
-        android:value="@string/back4app_app_id" />
-    <meta-data
-        android:name="com.parse.CLIENT_KEY"
-        android:value="@string/back4app_client_key" />
-
-
+</manifest>
 </manifest>
