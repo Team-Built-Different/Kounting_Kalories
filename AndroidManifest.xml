@@ -1,3 +1,6 @@
+//This ia the android manifest which is pre build but was edited so that we could connect our app to the database
+//This was programmed by Alexander Sanchez
+
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kountingkalories">
